@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/vi7/digispark-usb-blink.svg?branch=master)](https://travis-ci.com/vi7/digispark-usb-blink)
+
 Digispark USB Blink Example
 ===========================
 
