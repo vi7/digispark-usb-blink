@@ -17,6 +17,17 @@ Program Micronucleus bootloader to the ATtiny85
 - `micronucleus` bootloader - [1.11](https://github.com/micronucleus/micronucleus/blob/v1.11/firmware/releases/micronucleus-1.11.hex)
 - `Bus Pirate` device - [v3b custom mod](https://sandboxelectronics.com/?product=bus-pirate-v3b-with-probe-cable)
 
+### Hardware connection
+
+| Bus Pirate  | Digispark ATtiny85 |
+|-------------|--------------------|
+| GND         | GND (or pin4)      |
+| +5V         | 5V (or pin8)       |
+| CS (WT)     | P5 (RESET)         |
+| MOSI (GR)   | P0 (MOSI)          |
+| MISO (Blk)  | P1 (MISO)          |
+| CLK (PU)    | P2 (SCLK/CLK)      |
+
 ### Commands cheat sheet
 
 Check buspirate connection:
