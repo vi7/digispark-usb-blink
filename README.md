@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/vi7/digispark-usb-blink.svg?branch=master)](https://travis-ci.com/vi7/digispark-usb-blink)
 
-Digispark USB Blink Example
-===========================
+Digispark USB Tips
+==================
 
 LED blink example for the Digispark USB ATTiny85 clone. LED resides on the pin 1
 
@@ -49,3 +49,9 @@ AVR fuses calc: https://www.engbedded.com/fusecalc/
 Microcontroller pinout cheat sheet: https://tinkerlog.com/2009/06/18/microcontroller-cheat-sheet/
 
 Bus Pirate AVR Programming: http://dangerousprototypes.com/docs/Bus_Pirate_AVR_Programming
+
+
+Serial console for the Digispark USB ATTiny85
+---------------------------------------------
+
+**TODO:**
