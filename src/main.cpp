@@ -1,24 +1,28 @@
 #include <Arduino.h>
 
-/*
- * LED blink for the Digispark ATiny85 clone
- */
+#define LED_BUILTIN 1
 
-#define LED 1
+/**********
+ *  MAIN  *
+ **********/
 
 void setup() {
-  pinMode(LED, OUTPUT);
-  // digitalWrite(LED, LOW);
+
+  // For Digispark ATTiny85 TinyDebugSerial overrides Serial and uses PB3 pin as TX
+  Serial.begin(9600);
+  Serial.println("\n******* Hello! Board is up. *******");
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 void loop() {
-
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
+  Serial.println("****************");
+  Serial.println("Loop start");
+  digitalWrite(LED_BUILTIN, HIGH);
+  Serial.println("LED is on");
   delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  Serial.println("LED is off");
+  delay(2000);
 }

@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.com/vi7/digispark-usb-blink.svg?branch=master)](https://travis-ci.com/vi7/digispark-usb-blink)
 
-Digispark USB Tips
-==================
+Digispark USB ATTiny85 Usage Tips
+=================================
 
-LED blink example for the Digispark USB ATTiny85 clone. LED resides on the pin 1
+Usage tips and examples for the Digispark USB ATTiny85 clone. Built-in LED resides on the pin 1
 
 This README also contains info about programming of the Digispark USB ATTiny85 clone with the [Bus Pirate](http://dangerousprototypes.com/docs/Bus_Pirate)
 
@@ -54,4 +54,8 @@ Bus Pirate AVR Programming: http://dangerousprototypes.com/docs/Bus_Pirate_AVR_P
 Serial console for the Digispark USB ATTiny85
 ---------------------------------------------
 
-**TODO:**
+When using Platformio provided arduino-avr-digistump framework use Serial exactly the same way as usual. See [src/main.cpp](src/main.cpp) for the example.
+
+In case of Digispark USB Serial data (TX) will be available on the pin `PB3` (ATTiny85 pin2)
+
+> ATTiny adapted Serial based on the `TinyDebugSerial` lib is capable of data transmission only (i.e. Serial write).
