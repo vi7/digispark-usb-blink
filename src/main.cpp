@@ -1,14 +1,12 @@
 #include <Arduino.h>
 
-#define LED_BUILTIN 1
-
 /**********
  *  MAIN  *
  **********/
 
 void setup() {
 
-  // For Digispark ATTiny85 TinyDebugSerial overrides Serial and uses PB3 pin as TX
+  // For Digispark ATTiny85 dtiny core TinyDebugSerial overrides Serial and uses PB3 pin as TX
   Serial.begin(9600);
   Serial.println("\n******* Hello! Board is up. *******");
 
