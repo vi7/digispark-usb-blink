@@ -3,7 +3,7 @@
 Digispark USB ATTiny85 Usage Tips
 =================================
 
-Usage tips and examples for the Digispark USB ATTiny85 clone. Built-in LED resides on the pin 1
+Usage tips and examples for the Digispark USB ATTiny85 clone. Built-in LED resides on the pin 1 (`PB1`)
 
 This README also contains info about programming of the Digispark USB ATTiny85 clone with the [Bus Pirate](http://dangerousprototypes.com/docs/Bus_Pirate)
 
@@ -60,9 +60,17 @@ avrdude -P /dev/tty.usbserial -c buspirate -p t85 -b 115200 -U flash:w:t85_defau
 Serial console (UART)
 ---------------------
 
-For the [Digispark ATTiny85 (_dtiny_) core](https://github.com/ArminJo/DigistumpArduino) `TinyDebugSerial` overrides `Serial` and uses `PB3` pin as serial TX (transmission only)
+### Digispark ATTiny85
 
-For the [Generic ATtiny85 (_tiny_) core](https://github.com/SpenceKonde/ATTinyCore/blob/master/avr/extras/ATtiny_x5.md#uart-serial-support) `TinySoftwareSerial` overrides `Serial` and uses:
+[`dtiny` core](https://github.com/ArminJo/DigistumpArduino) `TinyDebugSerial` overrides `Serial` and uses:
+- `PB3` as TX for CPU frequencies <= 8MHz
+- `PB2` as TX for other frequencies
+
+See [TinyDebugSerial.h](https://github.com/ArminJo/DigistumpArduino/blob/master/digistump-avr/cores/tiny/TinyDebugSerial.h) for the details
+
+### Generic ATtiny85
+
+[`tiny` core](https://github.com/SpenceKonde/ATTinyCore/blob/master/avr/extras/ATtiny_x5.md#uart-serial-support) `TinySoftwareSerial` overrides `Serial` and uses:
 - `AIN0` (`PB0`) as TX
 - `AIN1` (`PB1`) as RX
 
